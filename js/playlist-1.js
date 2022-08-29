@@ -54,7 +54,7 @@ document.querySelector('main').innerHTML = `
 
 
 
-
+/*
 const listaPesama = ['Nije mene duso ubilo','Nagovori', 'Trezan', 'Pijem na eks', 'Vidovdan'];
 let stavka = '';
 
@@ -65,3 +65,24 @@ for(let i = 0; i < listaPesama.length; i++){
 }
 
 document.querySelector('main').innerHTML = `<ol>${stavka}</ol>`
+
+*/
+
+const listaPesama = ['Nije mene duso ubilo','Nagovori', 'Trezan', 'Pijem na eks', 'Vidovdan'];
+
+function proba(arr){
+  let pesma = '';
+
+  for(let i = 0; i < arr.length; i++){
+    pesma += `<li>${arr[i]}</li>`;
+  
+  }
+  return pesma;
+  
+}
+
+document.querySelector('main').innerHTML = `<ol>${proba(listaPesama)}</ol>`;
+
+
+
+
