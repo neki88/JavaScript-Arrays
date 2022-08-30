@@ -1,4 +1,4 @@
-const playlist = [
+/*const playlist = [
   ['So What', 'Miles Davis', '9:04'],
   ['Respect', 'Aretha Franklin', '2:45'],
   ['What a Wonderful World', 'Louis Armstrong', '2:21'],
@@ -22,3 +22,22 @@ document.querySelector('main').innerHTML = `
     ${createListItems(playlist)}
   </ol>
 `;
+
+*/
+const grand = [
+  ['Od kad sam se rodio', 'Spavaj kucko ispred vrata', 'Podigla me iz pepela', 'Samo pijan mogu', 'Ti i ja'],
+  ['Sinan Sakic', 'Ivan Cukic', 'Brzi Grand', 'Milos Bojanic', 'Duet Cover'],
+  ['3:14', '4:01','2:53','3:54','3:26',]
+
+]
+
+
+let pozicija = '';
+ for(let i = 0; i < grand[0].length; i++){
+  console.log('Dobroe');
+ }
+
+
+
+
+

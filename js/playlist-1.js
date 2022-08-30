@@ -85,4 +85,17 @@ document.querySelector('main').innerHTML = `<ol>${proba(listaPesama)}</ol>`;
 
 
 
+/*
+https://teamtreehouse.com/library/javascript-arrays/useful-array-methods#notes
 
+
+Set the conditional statement to run as long as the return value of indexOf() is not equal to -1.
+
+const people = [ 'Maria', 'Alyssa', 'Toni', 'Lee', 'Reggie' ];
+let personIndex = people.indexOf('Maria');  // 0
+
+if ( personIndex !== -1) { // it's ok because we're checking for -1 only
+ console.log(`${people[personIndex]} is in the array at index ${personIndex}.`);
+}
+
+*/

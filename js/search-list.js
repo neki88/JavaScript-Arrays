@@ -16,7 +16,7 @@ document.querySelector('main').innerHTML = `<p> ${message} </p>`;*/
 
 
 
-
+/*
 const naZalihama = ['spanać', 'mrkva', 'jaja', 'borovnice', 'mleko', 'supa'];
 
 let unos = prompt('Koji artikal vas zanima?');
@@ -32,6 +32,30 @@ else if(naZalihama.includes(unos.toLowerCase())){
 }
 
 document.querySelector('main').innerHTML = `<h1>${porukaKorisniku}</h1>`
+
+*/
+
+
+
+
+
+const zalihe = ['hleb','jaja', 'mleko', 'sir', 'salama'];
+
+const pitanje = prompt('Koji proizvod trazite?');
+let tekst = '';
+if(!pitanje){
+  tekst += `<h3>Molim unesite trazeni proizvod</h3>`
+}
+else if(zalihe.includes(pitanje.toLowerCase())){
+  tekst += `<h2>Trazeni proizvod <strong>${pitanje}</strong> je na stanju pod rednim brojem #${zalihe.indexOf(pitanje) + 1}</h2>`
+} else{
+  tekst += `<h2>Legendo <strong>${pitanje}</strong> ne postoji, ali evo sta ima:<br> ${zalihe.join(', ')}</h2>`
+}
+
+console.log(tekst)
+
+document.querySelector('main').innerHTML = tekst;
+
 
 
 
