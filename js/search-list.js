@@ -56,6 +56,10 @@ console.log(tekst)
 
 document.querySelector('main').innerHTML = tekst;
 
+/* https://teamtreehouse.com/library/javascript-arrays/locate-and-join-array-elements */
+
+
+
 
 
 
