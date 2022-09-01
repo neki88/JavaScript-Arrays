@@ -23,7 +23,7 @@ function quiz(arr) {
 
 document.querySelector('main').innerHTML = `<h1>Broj tacnih odgovora je ${quiz(QandA)}!</h1>`;
 */
-
+/*My way 
 const questions = [ 
     ['How many planets are in the Solar System?', '8'],
     ['How many continents are there?', '7'],
@@ -43,7 +43,58 @@ const questions = [
 
   document.querySelector('main').innerHTML = `<h1>Tacnih odgovora ima ${kviz(questions)}</h1>`
 
-  
+  */
+
+  /*HIs way */
+
+  const questions = [ 
+    ['How many planets are in the Solar System?', '8'],
+    ['How many continents are there?', '7'],
+    ['How many legs does an insect have?', '6'],
+    ['What year was JavaScript created?', '1995']  
+  ];
+
+  const correcAnswers = [  ];
+  const wrongAnswers = [  ];
+
+  let score = 0;
+  let li = '';
+  let lil = '';
+
+ 
+    for(let i = 0; i<questions.length; i++){
+      let question = questions[i][0];
+      let answer = questions[i][1];
+      let response = prompt(question);
+
+      if(response === answer){
+        score++;
+        correcAnswers.push(question);
+        li += `<li>${correcAnswers[i]}</li>`;
+      } else {
+        wrongAnswers.push(question);
+        lil += `<li>${wrongAnswers[i]}</li>`;
+      }
+    }
+
+    function createListItems(arr) {
+      let items = '';
+      for (let i = 0; i < arr.length; i++) {
+        items += `<li>${arr[i]}</li>`;
+      }
+      return items;
+    }
+    
 
 
+let html = `
 
+<h1>Broj tacnih ogovora je ${score}</h1>
+<p>Ovo su oni</p>
+<ol>${createListItems(correcAnswers)}</ol>
+<p>Ovo su pogresni</p>
+<ol>${createListItems(wrongAnswers)}</ol>
+
+`;
+
+document.querySelector('main').innerHTML = html;
